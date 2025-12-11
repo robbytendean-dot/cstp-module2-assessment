@@ -11,74 +11,78 @@
 </head>
 <body>
     <main>
-        <section class="container"> 
-            <h2 class="mt-3 mb-3">Travel Bucket List</h2>
+        <section class="bg-light"> 
+            <div class="container">
+                <h2 class="pt-3 pb-3 m-0">Travel Bucket List</h2>
+            </div>
         </section>
-        <hr/>
         <!-- Add Checklist Form -->
-        <section class="container mb-3"> 
-            <h4>Add Activity</h4>
-            <div>
-                <label>Country: </label>       
-                <input type="text" id="countryInput" class="form-control"/>
-            </div>
-            <div>
-                <label>City: </label>     
-                <input type="text" id="cityInput" class="form-control"/>
-            </div>
-            <div>
-                <label>Activity:</label>
-                <input type="text" id="activityInput" class="form-control"/>
-            </div>
-            <div>
-                <label>Priority: </label>           
-                <select id="priorityInput" class="form-control">
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-            </div>
-            <div>
-                <button id="addActivity" class="btn btn-primary mt-3 mb-3">Save</button>
-            </div>
-            <div id="saveStatus" class="text-success">
+        <section class="my-bg-pastellightblue pb-3 pt-3"> 
+            <div class="container">
+                <h4>Add Activity</h4>
+                <div>
+                    <label>Country: </label>       
+                    <input type="text" id="countryInput" class="form-control"/>
+                </div>
+                <div>
+                    <label>City: </label>     
+                    <input type="text" id="cityInput" class="form-control"/>
+                </div>
+                <div>
+                    <label>Activity:</label>
+                    <input type="text" id="activityInput" class="form-control"/>
+                </div>
+                <div>
+                    <label>Priority: </label>           
+                    <select id="priorityInput" class="form-control">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="addActivity" class="btn btn-primary mt-3 mb-3">Save</button>
+                </div>
+                <div id="saveStatus">
+                </div>
             </div>
         </section>
-        <hr/>
         <!-- Bucket List -->
-        <section class="container"> 
-            <header class="row gy-3 border-bottom border-dark text-start pb-3">
-                <div class="col-12 col-md-2 fw-bold">Country</div>
-                <div class="col-12 col-md-2 fw-bold">City</div>
-                <div class="col-12 col-md-4 fw-bold">Activity</div>
-                <div class="col-12 col-md-1 fw-bold">Priority</div>
-                <div class="col-12 col-md-1 fw-bold">Status</div>
-                <div class="col-12 col-md-2 fw-bold">Actions</div>
-            </header>
-            <content id="bucketContent">
-                <!--
-                <div class="row gy-3 pb-1 border-bottom border-dark text-start">
-                    <div class="col-12 col-md-2"> 
-                        Country 1
+        <section class="bg-light"> 
+            <div class="container">
+                <header class="row gy-3 border-bottom border-dark text-start pb-3">
+                    <div class="col-6 col-md-2 fw-bold">Country</div>
+                    <div class="col-6 col-md-2 fw-bold">City</div>
+                    <div class="col-12 col-md-4 fw-bold">Activity</div>
+                    <div class="col-6 col-md-1 fw-bold">Priority</div>
+                    <div class="col-6 col-md-1 fw-bold">Status</div>
+                    <div class="col-12 col-md-2 fw-bold">Actions</div>
+                </header>
+                <content id="bucketContent">
+                    <!--
+                    <div class="row gy-3 pb-1 border-bottom border-dark text-start">
+                        <div class="col-12 col-md-2"> 
+                            Country 1
+                        </div>
+                        <div class="col-12 col-md-2"> 
+                            City 1
+                        </div>
+                        <div class="col-12 col-md-4"> 
+                            Activity 1
+                        </div>
+                        <div class="col-12 col-md-1"> 
+                            <span class="badge bg-warning">High</span> 
+                        </div>
+                        <div class="col-12 col-md-1"> 
+                            <span class="badge bg-primary">Done</span> 
+                        </div>
+                        <div class="col-12 col-md-2"> 
+                            Actions
+                        </div>
                     </div>
-                    <div class="col-12 col-md-2"> 
-                        City 1
-                    </div>
-                    <div class="col-12 col-md-4"> 
-                        Activity 1
-                    </div>
-                    <div class="col-12 col-md-1"> 
-                        <span class="badge bg-warning">High</span> 
-                    </div>
-                    <div class="col-12 col-md-1"> 
-                        <span class="badge bg-primary">Done</span> 
-                    </div>
-                    <div class="col-12 col-md-2"> 
-                        Actions
-                    </div>
-                </div>
-                -->
-            </content>
+                    -->
+                </content>
+            </div> 
         </section>
     </main>
     <!-- Bootstrap JS -->

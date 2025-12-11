@@ -57,16 +57,16 @@ function renderBucket(bucketList)
         let rowElement = document.createElement("div");
         rowElement.className="row gy-3 pb-1 border-bottom border-dark text-start pb-3 pt-3";
         rowElement.innerHTML=`
-            <div class="col-12 col-md-2">${t.country}</div>
-            <div class="col-12 col-md-2">${t.city}</div>
+            <div class="col-6 col-md-2">${t.country}</div>
+            <div class="col-6 col-md-2">${t.city}</div>
             <div class="col-12 col-md-4">${t.activity}</div>
-            <div class="col-12 col-md-1"> 
+            <div class="col-6 col-md-1"> 
                 <span class="badge ${t.priority == "high" ? 
                     "bg-danger" : (t.priority == "medium" ? "bg-warning" : "bg-success")}">
                     ${pascalCase(t.priority)}
                 </span> 
             </div>
-            <div class="col-12 col-md-1">
+            <div class="col-6 col-md-1">
                 <span class="badge ${t.done ? "bg-success" : "bg-warning"}">
                     ${t.done ? "Done" : "Pending"}
                 </span>
@@ -83,7 +83,7 @@ function renderBucket(bucketList)
             let newCountry = prompt("Update Country: ", t.country);
             let newCity = prompt("Update City: ", t.city);
             let newActivity = prompt("Update Activity: ", t.activity);
-            let newPriority = prompt("Update Priority: ", t.priority).toLowerCase();
+            let newPriority = prompt("Update Priority (High/Medium/Low): ", t.priority).toLowerCase();
             let newDone = prompt("Update Status (Done/Pending):", t.done == 1 ? "Done" : "Pending").toLowerCase() == "done" ? 1 : 0;
             modifyActivity(bucketList,t.id,newCountry,newCity,newActivity,newPriority,newDone);
             renderBucket(bucketList);
