@@ -81,12 +81,27 @@ function renderBucket(bucketList)
         let editBtn = rowElement.querySelector(".edit-button");
         editBtn.addEventListener("click", function() {
             let newCountry = prompt("Update Country: ", t.country);
-            let newCity = prompt("Update City: ", t.city);
-            let newActivity = prompt("Update Activity: ", t.activity);
-            let newPriority = prompt("Update Priority (High/Medium/Low): ", t.priority).toLowerCase();
-            let newDone = prompt("Update Status (Done/Pending):", t.done == 1 ? "Done" : "Pending").toLowerCase() == "done" ? 1 : 0;
-            modifyActivity(bucketList,t.id,newCountry,newCity,newActivity,newPriority,newDone);
-            renderBucket(bucketList);
+            if (newCountry != null)
+            {
+                let newCity = prompt("Update City: ", t.city);
+                if (newCity != null)
+                {
+                    let newActivity = prompt("Update Activity: ", t.activity);
+                    if (newActivity!=null)
+                    {
+                        let newPriority = prompt("Update Priority (High/Medium/Low): ", t.priority).toLowerCase();
+                        if (newPriority != null)
+                        {
+                            let newDone = prompt("Update Status (Done/Pending):", t.done == 1 ? "Done" : "Pending").toLowerCase();
+                            if (newDone != null)
+                            {
+                                modifyActivity(bucketList,t.id,newCountry,newCity,newActivity,newPriority,newDone);
+                                renderBucket(bucketList);
+                            }
+                        }
+                    }
+                }
+            }
         });
 
         //add click event to delete button        

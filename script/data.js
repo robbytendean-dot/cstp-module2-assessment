@@ -76,17 +76,34 @@ function addActivity(bucketList,country,city,activity,priority)
 
 function modifyActivity(bucketList,updateID,updateCountry,updateCity,updateActivity,updatePriority,updateDone)
 {
+    let errorMessage="";
     for(let b of bucketList)
     {
         if (b.id==updateID)
-        {
-            b.country=updateCountry;
-            b.city=updateCity;
-            b.activity=updateActivity;
-            b.priority=updatePriority;
-            b.done=updateDone;
+        {   
+            //check if any error
+            if (!["high","medium","low"].includes(updatePriority))
+            {
+                errorMessage += "Invalid Priority: " + updatePriority + "; Please use High/Medium/Low instead.\n";
+            }
+            if (!["done","pending"].includes(updateDone))
+            {
+                errorMessage += "Invalid Status: " + updateDone + "; Please use Done/Pending instead.\n";
+            }
+            if (errorMessage == "")
+            {
+                b.country=updateCountry;
+                b.city=updateCity;
+                b.activity=updateActivity;
+                b.priority=updatePriority;
+                b.done = updateDone == "done" ? 1 : 0;
+            }
             break;
         }
+    }
+    if (errorMessage != "")
+    {
+        alert(errorMessage);
     }
     return saveData(bucketList);
 }
