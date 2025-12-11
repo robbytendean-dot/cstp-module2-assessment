@@ -1,0 +1,17 @@
+.task-title {
+    text-decoration:underline;
+    font-weight: bold;
+}
+.assignee {
+    font-style: italic;
+}
+
+.priority-high {
+    background-color: red;
+}
+.priority-medium {
+    background-color: yellow;
+}
+.priority-low {
+    background-color: green;
+}
