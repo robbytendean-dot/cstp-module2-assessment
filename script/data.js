@@ -1,6 +1,6 @@
 const JSON_BIN_BASE_URL = 'https://api.jsonbin.io/v3';
-const JSON_BIN_ID=""
-const JSON_BIN_MASTER_KEY=""
+const JSON_BIN_ID="";
+const JSON_BIN_MASTER_KEY="";
 
 function getLargestID(bucketList)
 {
