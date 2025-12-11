@@ -83,8 +83,8 @@ function renderBucket(bucketList)
             let newCountry = prompt("Update Country: ", t.country);
             let newCity = prompt("Update City: ", t.city);
             let newActivity = prompt("Update Activity: ", t.activity);
-            let newPriority = prompt("Update Priority: ", t.priority);
-            let newDone = prompt("Update Status (Done/Pending):", t.done ? "Done" : "Pending").toLowerCase() == "done";
+            let newPriority = prompt("Update Priority: ", t.priority).toLowerCase();
+            let newDone = prompt("Update Status (Done/Pending):", t.done == 1 ? "Done" : "Pending").toLowerCase() == "done" ? 1 : 0;
             modifyActivity(bucketList,t.id,newCountry,newCity,newActivity,newPriority,newDone);
             renderBucket(bucketList);
         });
